@@ -7,7 +7,7 @@ public class Square extends Figures{
 	
 	//private int color;
 		public Square(int size, int x, int y,  int numberInside) {
-			super(size, x, y, numberInside);
+			super(int x, int y, int size);
 			
 		}
 		
