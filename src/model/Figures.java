@@ -17,7 +17,7 @@ public class Figures {
 	boolean moving;
 	int acceleration;
 	
-	public Figures (int x, int y, int size, int r, int g, int b) 
+	public Figures (int x, int y, int size,int numberInside) 
 	{
 		this.x = x;
         this.y= y;
@@ -64,7 +64,7 @@ public class Figures {
 	}
 	
 	/*	public void stopMoveSquare() {
-			
+	 
 		}
 	*/
 	}
@@ -79,5 +79,8 @@ public class Figures {
 	}
 	public int getAcceleration() {
 		return acceleration;
+	}
+	public int getNumbreInside() {
+		return numbreInside;
 	}
 }
