@@ -1,25 +1,54 @@
 package model;
 
+import processing.core.PApplet;
+
 public class Figures {
 	
-	private int posX; 
-	private int posY;
-	private float direction;
-	private String value;
-	boolean isActive;
-	private int r, g, b;
-	private int innerPosition;
+	int x; 
+	int y;
+	int size;
+	int direction;
+	int numbreInside;
+	int r; 
+	int g;
+	int b;
+	String value;
+	boolean moving;
+	int acceleration;
 	
-	public Figures (int posX, int posY, int r, int g, int b) 
+	public Figures (int x, int y, int size, int r, int g, int b) 
 	{
-		this.posX = posX;
-        this.posY = posY;
-        this.value = value;
-
-        this.isActive = false;
-        
+		this.x = x;
+        this.y= y;
+        this.size = size;
+        this.acceleration = 2;
         this.r = 0;
         this.g = 0;
         this.b = 0;
+        
+        this.moving = true;
+        
+	}
+	public void moveSquare (PApplet app) {
+		if (moving = true) {
+			
+				y+= acceleration; 
+				if (y>app.height-(size/2)) {
+					y=app.height-(size/2);
+					acceleration-=4;
+					
+				}			
+		}
+	}
+	
+	public void moveCircle(PApplet app) {
+		x+= acceleration; 
+		if (y>app.height-(size/2)) {
+			y=app.height-(size/2);
+			acceleration-=4;
+			
+			
+	}
+	
 	}
 }
